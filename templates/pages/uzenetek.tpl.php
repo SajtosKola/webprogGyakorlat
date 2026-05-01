@@ -1,5 +1,5 @@
 <table>
-    <caption>5. gyakorlat 1. feladat:<br>TÁBLÁZAT</caption>
+    <caption>TÁBLÁZAT</caption>
     <tr>
         <th>Employee</th>
         <th>Salary</th>
