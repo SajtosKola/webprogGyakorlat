@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
         $stmt = $connect->prepare('INSERT into megnevezes (nev) VALUES (:nev)');
         $stmt->execute(array(':nev' => $_POST['nev']));
     }
-    header("Location: crud_main");
+    header("Location: ./crud_main");
     exit;
 }
 ?>

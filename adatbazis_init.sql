@@ -40,6 +40,9 @@ CREATE TABLE korlatozas (
                             FOREIGN KEY (mertekid) REFERENCES mertek(id)
 );
 
+ALTER TABLE `korlatozas` DROP FOREIGN KEY `korlatozas_ibfk_1`; ALTER TABLE `korlatozas` ADD CONSTRAINT `korlatozas_ibfk_1` FOREIGN KEY (`megnevid`) REFERENCES `megnevezes`(`id`) ON DELETE CASCADE ON UPDATE RESTRICT;
+
+
 INSERT INTO `felhasznalok` (`id`,`csaladi_nev`,`uto_nev`,`bejelentkezes`,`jelszo`) VALUES 
  (1,'Családi_1','Utónév_1','Login1',sha1('login1')),
  (2,'Családi_2','Utónév_2','Login2',sha1('login2')),

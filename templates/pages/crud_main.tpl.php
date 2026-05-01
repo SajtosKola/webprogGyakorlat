@@ -1,5 +1,6 @@
-<a href="uj_megnevezes" class="createbtn"><button type="button" class="btn btn-primary">Új megnevezés</button></a>
-<table class="table table-bordered table-hover mt-3">
+<h2>Korlátozásnevek szerkesztése</h2>
+<a href="uj_megnevezes" class="btn btn-primary mb-3">Új megnevezés</a>
+<table class="table table-bordered table-striped table-hover bg-white">
     <thead>
     <tr>
         <th>id</th>
@@ -13,8 +14,15 @@
             <td><?php echo $data['id']; ?></td>
             <td><?php echo $data['nev']; ?></td>
             <td>
-                <a href="edit?id=<?php echo $data['id']; ?>" class="btn btn-primary">Edit</a>
-                <a href="delete?id=<?php echo $data['id']; ?>" class="btn btn-danger">Delete</a>
+                <form action="./edit" method="POST" class="d-inline">
+                    <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
+                    <button type="submit" class="btn btn-primary">Módosítás</button>
+                </form>
+
+                <form action="./delete" method="POST" class="d-inline">
+                    <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
+                    <button type="submit" class="btn btn-danger">Törlés</button>
+                </form>
             </td>
         </tr>
     <?php endforeach; ?>
