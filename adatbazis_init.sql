@@ -40,6 +40,15 @@ CREATE TABLE korlatozas (
                             FOREIGN KEY (mertekid) REFERENCES mertek(id)
 );
 
+CREATE TABLE IF NOT EXISTS `kapcsolat` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nev` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `uzenet` text NOT NULL,
+  `datum` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+
 ALTER TABLE `korlatozas` DROP FOREIGN KEY `korlatozas_ibfk_1`; ALTER TABLE `korlatozas` ADD CONSTRAINT `korlatozas_ibfk_1` FOREIGN KEY (`megnevid`) REFERENCES `megnevezes`(`id`) ON DELETE CASCADE ON UPDATE RESTRICT;
 
 
