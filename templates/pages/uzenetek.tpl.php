@@ -1,14 +1,12 @@
 <?php
-// Szerveroldali ellenőrzés (PHP)
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['kuld'])) {
     $email = trim($_POST['e']);
     $msg = trim($_POST['m']);
-    // Név: bejelentkezett felhasználó vagy "Vendég"
     $nev = isset($_SESSION['login']) ? $_SESSION['login'] : "Vendég";
 
     if (strpos($email, '@') && !empty($msg)) {
         try {
-            // PDO kapcsolat a megadott adatokkal
+        
             $dbh = new PDO('mysql:host=localhost;dbname=forgalomkorlatozas', 'root', '',
                           array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
             
@@ -16,10 +14,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['kuld'])) {
             $sth = $dbh->prepare($sql);
             $sth->execute(array($nev, $email, $msg));
             
-            // "Ötödik oldal" tartalma (visszajelzés mentés után)[cite: 4]
             echo "<div class='success-page'><h2>Köszönjük az üzenetet!</h2>";
             echo "<p><strong>Név:</strong> $nev</p><p><strong>Üzenet:</strong> $msg</p></div>";
-            return; // Megállítjuk a sablon többi részét
+            return;
         } catch (PDOException $e) { echo "Adatbázis hiba: " . $e->getMessage(); }
     }
 }
@@ -41,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['kuld'])) {
 </form>
 
 <script>
-// Kliensoldali ellenőrzés (JavaScript)[cite: 4]
+
 document.getElementById('contact_form').onsubmit = function(e) {
     let ok = true;
     const email = document.getElementById('e').value;
@@ -57,6 +54,6 @@ document.getElementById('contact_form').onsubmit = function(e) {
         ok = false;
     } else { document.getElementById('js_err_m').style.display = 'none'; }
 
-    if (!ok) e.preventDefault(); // Megakadályozza a beküldést hiba esetén[cite: 4]
+    if (!ok) e.preventDefault(); 
 };
 </script>

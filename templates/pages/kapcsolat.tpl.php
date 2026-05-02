@@ -1,11 +1,9 @@
 <?php
-// Csak bejelentkezett felhasználó láthatja[cite: 4]
 if (!isset($_SESSION['login'])) {
     echo "<h3>Ehhez az oldalhoz bejelentkezés szükséges!</h3>";
 } else {
     try {
         $dbh = new PDO('mysql:host=localhost;dbname=forgalomkorlatozas', 'root', '');
-        // Fordított időrend (legfrissebb elől)[cite: 4]
         $sql = "SELECT nev, email, uzenet, datum FROM kapcsolat ORDER BY datum DESC";
         $sth = $dbh->query($sql);
 ?>
