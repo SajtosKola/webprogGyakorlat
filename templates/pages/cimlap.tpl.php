@@ -1,11 +1,80 @@
-<h2>Köszöntés</h2>
+<h1>Forgalomkorlátozások és közlekedési tanácsok</h1>
 <img src="./images/arc.jpg">
-<h3>Mi a Lorem Ipsum?</h3>
-<p>A Lorem Ipsum egy egyszerû szövegrészlete, szövegutánzata a betûszedõ és nyomdaiparnak. A Lorem Ipsum az 1500-as évek óta standard szövegrészletként szolgált az iparban; mikor egy ismeretlen nyomdász összeállította a betûkészletét és egy példa-könyvet vagy szöveget nyomott papírra, ezt használta. Nem csak 5 évszázadot élt túl, de az elektronikus betûkészleteknél is változatlanul megmaradt. Az 1960-as években népszerûsítették a Lorem Ipsum részleteket magukbafoglaló Letraset lapokkal, és legutóbb softwarekkel mint például az Aldus Pagemaker.</p>
-<h3>Honnan származik?</h3>
-<p>A hiedelemmel ellentétben a Lorem Ipsum nem véletlenszerû szöveg. Gyökerei egy Kr. E. 45-ös latin irodalmi klasszikushoz nyúlnak. Richarrd McClintock a virginiai Hampden-Sydney egyetem professzora kikereste az ismeretlenebb latin szavak közül az egyiket (consectetur) egy Lorem Ipsum részletbõl, és a klasszikus irodalmat átkutatva vitathatatlan forrást talált. A Lorem Ipsum az 1.10.32 és 1.10.33-as de Finibus Bonoruem et Malorum részleteibõl származik (A Jó és Rossz határai - Cicero), Kr. E. 45-bõl. A könyv az etika elméletét tanulmányozza, ami nagyon népszerû volt a reneszánsz korban. A Lorem Ipsum elsõ sora, Lorem ipsum dolor sit amet.. a 1.10.32-es bekezdésbõl származik.</p>
-<p>A Lorem Ipsum alaprészlete, amit az 1500-as évek óta használtak, az érdeklõdõk kedvéért lent újra megtekinthetõ. Az 1.10.32 és 1.10.33-as bekezdéseket szintén eredeti formájukban reprodukálták a hozzá tartozó angol változattal az 1914-es fordításból H. Rackhamtól.</p>
-<h3>Miért használjuk?</h3>
-<p>Ez egy régóta elfogadott tény, miszerint egy olvasót zavarja az olvasható szöveg miközben a szöveg elrendezését nézi. A Lorem Ipsum használatának lényege, hogy többé-kevésbé rendezettebb betûket tartalmaz, ellentétben a Tartalom helye, Tartalom helye-féle megoldással. Sok desktop szerkesztõ és weboldal szerkesztõ használja a Lorem Ipsum-ot mint alapbeállítású szövegmodellt, és egy keresés a lorem ipsum-ra sok félkész weboldalt fog eredményezni.</p>
-<h3>Honnan szerezhető be?</h3>
-<p>A Lorem Ipsum részleteinek sok változata elérhetõ, de a legtöbbet megváltoztatták egy kis humorral és véletlenszerûen kiválasztott szavakkal, amik kicsit sem teszik értelmessé. Ha használni készülsz a Lorem Ipsumot, biztosnak kell lenned abban, hogy semmi kínos sincs elrejtve a szöveg közepén. Az összes internetes Lorem Ipsum készítõ igyekszik elõre beállított részleteket ismételni a szükséges mennyiségben, ezzel téve az internet egyetlen igazi Lorem Ipsum generátorává ezt az oldalt. Az oldal körülbelül 200 latin szót használ, egy maroknyi modell-mondatszerkezettel így téve a Lorem Ipsumot elfogadhatóvá. Továbbá az elkészült Lorem Ipsum humortól, ismétlõdéstõl vagy értelmetlen szavaktól mentes.</p>
+<p class="bevezeto">Célunk a biztonságos közlekedés támogatása az útlezárások és forgalomkorlátozások közérthető bemutatásával.
+    Tudja meg, miért van szükség sebességkorlátozásra vagy félpályás útlezárásra a karbantartási munkák idején,
+    és készüljön fel előre az utazására adatbázisunk segítségével.</p>
+<h2>A korlátozások jelentése</h2>
+<ul class="list-group list-group-flush">
+    <li class="list-group-item"><b>Útszűkület:</b> A forgalmi sávok szélessége csökken, de a sávok száma változatlan marad. Fokozott figyelem szükséges a tükrökre!</li>
+    <li class="list-group-item"><b>Félpályás lezárás:</b> A leggyakoribb típus kátyúzásnál vagy kábel fektetésnél. A forgalmat általában jelzőlámpa vagy jelzőőr irányítja váltakozó irányban.</li>
+    <li class="list-group-item"><b>Teljes lezárás:</b> Az érintett útszakaszt egyáltalán nem lehet használni. Ilyenkor érdemes a lehetséges kerülőutakban gondolkodni.</li>
+</ul>
+<br>
+<h2>Mi történik a munkálatok alatt?</h2>
+<table class="table table-light">
+    <thead>
+    <tr class="table-primary">
+        <th scope="col">Tevékenység</th>
+        <th scope="col">Leírás</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">Aszfaltmarás</th>
+        <td>A régi, tönkrement útfelület felső rétegének eltávolítása speciális géppel.</td>
+    </tr>
+    <tr>
+        <th scope="row">Kátyúzás</th>
+        <td>Gyors beavatkozás az úthibák ellen, hogy megelőzzék a futóműkárokat.</td>
+    </tr>
+    <tr>
+        <th scope="row">Padkarendezés</th>
+        <td>Az út menti földterület szintbe hozása a vízelvezetés javítása érdekében.</td>
+    </tr>
+    </tbody>
+</table>
+<h2>Hasznos tanácsok autósoknak</h2>
+<ol class="list-group list-group-numbered">
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div class="ms-2 me-auto">
+            <div class="fw-bold">A sebességkorlátozások szigorú betartása</div>
+            Az adatbázisunkban látható, hogy a munkavégzés jellegétől függően gyakran találkozhatunk
+            <span class="text-primary fw-bold">30 km/h</span> vagy <span class="text-primary fw-bold">40 km/h</span>
+            értékű korlátozásokkal. Ezeket nem csupán az úthibák, hanem a munkaterületen dolgozó szakemberek biztonsága érdekében is vezetik be.
+        </div>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div class="ms-2 me-auto">
+            <div class="fw-bold">Felkészülés egyenetlen úttestre</div>
+            Az <span class="text-danger fw-bold">"Aszfaltmarás"</span> vagy <span class="text-danger fw-bold">"Hézagkiöntés"</span> megnevezésű munkálatok során az úttest egyenetlenné válik.
+            A felmart aszfalton a gumiabroncsok tapadása jelentősen csökken, ami megnövelheti a fékutat.
+            Ilyen szakaszokon kerülje a hirtelen fékezést és az éles kormánymozdulatokat, tartsunk a szokásosnál jóval nagyobb követési távolságot a felverődő kövek és por elkerülése végett.
+        </div>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div class="ms-2 me-auto">
+            <div class="fw-bold">Sávváltás és útszűkület kezelése</div>
+            Amikor az adatbázis <span class="text-warning fw-bold">"Útszűkületet"</span> vagy <span class="text-warning fw-bold">"Sávlezárást"</span> jelez, a legfontosabb a "cipzár-elv" alkalmazása.
+            Ne próbáljon meg az utolsó pillanatig előzni; soroljon be időben a nyitott sávba, ezzel megelőzve a torlódások kialakulását.
+            <span class="text-warning fw-bold">"Félpályás lezárásnál"</span> különösen figyeljen a jelzőlámpákra vagy a jelzőőrök utasításaira, mivel a váltakozó irányú forgalom fokozott türelmet igényel[cite: 4].
+        </div>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div class="ms-2 me-auto">
+            <div class="fw-bold">Időbeli tervezés és türelem</div>
+            A korlátozásoknak fix időtartama van, amelyet a <span class="text-success fw-bold">"Mettől"</span> és <span class="text-success fw-bold">"Meddig"</span> oszlopok jelölnek a rendszerben.
+            Mivel az útépítések, mint például a <span class="text-success fw-bold">"Csomópont építés"</span> gyakran hetekig vagy hónapokig tarthatnak, érdemes a megszokott menetidőhöz 10-15 percet hozzáadni[cite: 2, 3].
+            A türelem nemcsak a saját stressz-szintjét csökkenti, hanem a munkaterületen dolgozók testi épségét is védi.
+        </div>
+    </li>
+</ol>
+<h2>Mi történik, ha nem tartjuk be a közlekedési szabályokat?</h2>
+<p>Az alábbi, az idők során mémmé fejlődött illegális falusi verseny videója tökéletesen szemlélteti a következményeket.</p>
+<iframe class="ytvideo" width="560" height="315" src="https://www.youtube.com/embed/NR3AjBrVCiw?si=2exkjmQJoN_ty16l&amp;start=59" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h2>-Videó címe-</h2>
+--5 mp videó helye--
+
+<h2>Magyar Közút Nonprofit Zrt. Központi Igazgatóság</h2>
+<p>Bejelentéseket lehet tenni az online felületen: <a href="https://utinform.hu">utinform.hu</p></a>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2694.9096113476166!2d19.027452476221942!3d47.51115149456405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dea788318709%3A0x9b539e60b542243!2sBudapest%2C%20F%C3%A9nyes%20Elek%20u.%207-13%2C%201024!5e0!3m2!1shu!2shu!4v1777991443308!5m2!1shu!2shu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

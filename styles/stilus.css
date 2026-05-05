@@ -13,6 +13,17 @@ header {
     box-shadow: 0 2px 5px rgba(75, 244, 219, 0.1);
 }
 
+p {
+    margin: 20px 0 20px 10px;
+}
+
+p.bevezeto {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px;
+    text-align: center;
+}
+
 header img {
     float: left;
     margin: 0px 15px 0px 0px;
@@ -92,6 +103,10 @@ div#content img {
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
+iframe.ytvideo {
+    margin: 20px 100px;
+}
+
 footer {
     border-radius: 10px;
     margin: 10px;
@@ -99,6 +114,59 @@ footer {
     background-color: #2c3e50;
     color: white;
     text-align: center;
+}
+table {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px 0 20px 10px;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+ol {
+    max-width: 1400px;
+}
+
+.list-group-item {
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.list-group-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    background-color: #fcfcfc;
+}
+
+
+.list-group-item .fw-bold {
+    color: #2c3e50;
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.list-group-numbered > li::before {
+    background-color: #69c3ff;
+    color: #2c3e50;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 40px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    width: 100%;
 }
 
 @media (max-width: 768px) {
