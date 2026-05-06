@@ -69,10 +69,11 @@
         </div>
     </li>
 </ol>
+<section class="video-section">
 <h2>Mi történik, ha nem tartjuk be a közlekedési szabályokat?</h2>
 <p>Az alábbi, az idők során mémmé fejlődött illegális falusi verseny videója tökéletesen szemlélteti a következményeket.</p>
-<iframe class="video-section" width="560" height="315" src="https://www.youtube.com/embed/NR3AjBrVCiw?si=2exkjmQJoN_ty16l&amp;start=59" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NR3AjBrVCiw?si=2exkjmQJoN_ty16l&amp;start=59" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</section>
 <section class="video-section">
     <h2>Mi történik, ha ittasan vezetsz?</h2>
     <video controls class="responsive-video">
