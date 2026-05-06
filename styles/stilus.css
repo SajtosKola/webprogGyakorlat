@@ -107,6 +107,27 @@ iframe.ytvideo {
     margin: 20px 100px;
 }
 
+.video-section {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #3498db;
+    margin: 20px 10px;
+}
+
+.responsive-video {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: block;
+}
+
+.video-summary h5 {
+    color: #e74c3c;
+    margin-top: 15px;
+}
+
 footer {
     border-radius: 10px;
     margin: 10px;
@@ -125,6 +146,10 @@ table {
 
 ol {
     max-width: 1400px;
+}
+
+iframe {
+    margin: 20px 10px;
 }
 
 .list-group-item {

@@ -1,5 +1,5 @@
 <h1>Forgalomkorlátozások és közlekedési tanácsok</h1>
-<img src="./images/arc.jpg">
+<img src="./images/roadclosed.jpg">
 <p class="bevezeto">Célunk a biztonságos közlekedés támogatása az útlezárások és forgalomkorlátozások közérthető bemutatásával.
     Tudja meg, miért van szükség sebességkorlátozásra vagy félpályás útlezárásra a karbantartási munkák idején,
     és készüljön fel előre az utazására adatbázisunk segítségével.</p>
@@ -10,6 +10,7 @@
     <li class="list-group-item"><b>Teljes lezárás:</b> Az érintett útszakaszt egyáltalán nem lehet használni. Ilyenkor érdemes a lehetséges kerülőutakban gondolkodni.</li>
 </ul>
 <br>
+<img src="./images/roadworks.jpg">
 <h2>Mi történik a munkálatok alatt?</h2>
 <table class="table table-light">
     <thead>
@@ -70,11 +71,25 @@
 </ol>
 <h2>Mi történik, ha nem tartjuk be a közlekedési szabályokat?</h2>
 <p>Az alábbi, az idők során mémmé fejlődött illegális falusi verseny videója tökéletesen szemlélteti a következményeket.</p>
-<iframe class="ytvideo" width="560" height="315" src="https://www.youtube.com/embed/NR3AjBrVCiw?si=2exkjmQJoN_ty16l&amp;start=59" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe class="video-section" width="560" height="315" src="https://www.youtube.com/embed/NR3AjBrVCiw?si=2exkjmQJoN_ty16l&amp;start=59" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<h2>-Videó címe-</h2>
---5 mp videó helye--
-
+<section class="video-section">
+    <h2>Mi történik, ha ittasan vezetsz?</h2>
+    <video controls class="responsive-video">
+        <source src="video/sajtburgermenu.mp4" type="video/mp4">
+        A böngésződ nem támogatja a videók lejátszását.
+    </video>
+    <p><small>Részlet az NLCafé vezetési kísérletéből: <a href="https://youtu.be/VFW4B6mb4bo?si=qI5prsF3fl1qYmCX">Eredeti videó</a></small></p>
+    <div class="video-summary">
+        <h5>A kísérlet főbb megállapításai:</h5>
+        <ul>
+            <li><strong>Lassuló reflexek:</strong> Az alkohol tompítja az idegrendszert, így a sofőr sokkal később reagál a felbukkanó akadályokra (pl. bóják, gyalogosok).</li>
+            <li><strong>Csőlátás:</strong> A perifériás látás drasztikusan beszűkül, a vezető nem veszi észre az oldalról érkező veszélyeket.</li>
+            <li><strong>Hamis magabiztosság:</strong> Annak ellenére, hogy a vezetési képességek romlanak, az ittas sofőrök gyakran túlbecsülik a saját tudásukat, és bátrabban vállalnak felesleges kockázatot.</li>
+        </ul>
+        <p><em>Ezek a tényezők a lezárt, forgalomkorlátozással érintett útszakaszokon – ahol a sávok szűkebbek és munkások is lehetnek az úton – még végzetesebbek lehetnek.</em></p>
+    </div>
+</section>
 <h2>Magyar Közút Nonprofit Zrt. Központi Igazgatóság</h2>
 <p>Bejelentéseket lehet tenni az online felületen: <a href="https://utinform.hu">utinform.hu</p></a>
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2694.9096113476166!2d19.027452476221942!3d47.51115149456405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dea788318709%3A0x9b539e60b542243!2sBudapest%2C%20F%C3%A9nyes%20Elek%20u.%207-13%2C%201024!5e0!3m2!1shu!2shu!4v1777991443308!5m2!1shu!2shu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
