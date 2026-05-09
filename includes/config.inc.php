@@ -17,7 +17,8 @@ $lablec = array(
 
 $oldalak = array(
 	'/' => array('fajl' => 'cimlap', 'szoveg' => 'Főoldal', 'menun' => array(1,1)),
-	'kepek' => array('fajl' => 'kepek', 'szoveg' => 'Képek', 'menun' => array(1,1)),
+	'kepgaleria' => array('fajl' => 'kepgaleria', 'szoveg' => 'Képek', 'menun' => array(1,1)),
+	'feltolt' => array('fajl' => 'feltolt', 'szoveg' => 'Feltöltés', 'menun' => array(0,1)),
 	'kapcsolat' => array('fajl' => 'kapcsolat', 'szoveg' => 'Kapcsolat', 'menun' => array(1,1)),
 	'uzenetek' => array('fajl' => 'uzenetek', 'szoveg' => 'Üzenetek', 'menun' => array(1,1)),
     'crud_main' => array('fajl' => 'crud_main', 'szoveg' => 'CRUD Menü', 'menun' => array(1,1)),
@@ -31,4 +32,10 @@ $oldalak = array(
 );
 
 $hiba_oldal = array ('fajl' => '404', 'szoveg' => 'A keresett oldal nem található!');
+
+$MAPPA = './kepek/';
+$TIPUSOK = array ('.jpg', '.jpeg', '.png', '.gif');
+$MEDIATIPUSOK = array('image/jpeg', 'image/png', 'image/gif', 'image/jpg');
+$DATUMFORMA = "Y.m.d. H:i";
+$MAXMERET = 1920*1080;
 ?>
