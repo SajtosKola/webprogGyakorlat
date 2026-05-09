@@ -1,59 +1,57 @@
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['kuld'])) {
-    $email = trim($_POST['e']);
-    $msg = trim($_POST['m']);
-    $nev = isset($_SESSION['login']) ? $_SESSION['login'] : "Vendég";
-
-    if (strpos($email, '@') && !empty($msg)) {
-        try {
-        
-            $dbh = new PDO('mysql:host=localhost;dbname=forgalomkorlatozas', 'root', '',
-                          array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
-            
-            $sql = "INSERT INTO kapcsolat (nev, email, uzenet, datum) VALUES (?,?,?,NOW())";
-            $sth = $dbh->prepare($sql);
-            $sth->execute(array($nev, $email, $msg));
-            
-            echo "<div class='success-page'><h2>Köszönjük az üzenetet!</h2>";
-            echo "<p><strong>Név:</strong> $nev</p><p><strong>Üzenet:</strong> $msg</p></div>";
-            return;
-        } catch (PDOException $e) { echo "Adatbázis hiba: " . $e->getMessage(); }
+<style>
+    .messages-container {
+        background-color: white; padding: 25px; border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin: 20px auto;
     }
-}
-?>
+    .uzenet-tablazat {
+        width: 100%; border-collapse: collapse; margin-top: 15px;
+    }
+    .uzenet-tablazat th {
+        background-color: #2c3e50; color: white; padding: 12px; text-align: left;
+    }
+    .uzenet-tablazat td {
+        padding: 12px; border-bottom: 1px solid #ddd;
+    }
+    .uzenet-tablazat tr:hover { background-color: #f1f1f1; }
+</style>
 
-<h2>Kapcsolatfelvétel</h2>
-<form id="contact_form" method="post" novalidate>
-    <p>Küldő: <strong><?= isset($_SESSION['login']) ? $_SESSION['login'] : "Vendég" ?></strong></p>
-    
-    <label>E-mail cím:</label><br>
-    <input type="text" name="e" id="e">
-    <div id="js_err_e" style="color:red; display:none;">Érvénytelen e-mail cím!</div><br>
-    
-    <label>Üzenet:</label><br>
-    <textarea name="m" id="m" rows="5"></textarea>
-    <div id="js_err_m" style="color:red; display:none;">Az üzenet nem lehet üres!</div><br>
-    
-    <input type="submit" name="kuld" value="Üzenet küldése">
-</form>
+<div class="messages-container">
+    <?php if (!isset($_SESSION['login'])): ?>
+        <div class="error-msg" style="color: #e74c3c; font-weight: bold; text-align: center; padding: 20px;">
+            <h3>Ehhez az oldalhoz bejelentkezés szükséges!</h3>
+        </div>
+    <?php else: ?>
+        <h2>Beérkezett üzenetek</h2>
 
-<script>
+        <?php if (!empty($db_hiba)): ?>
+            <p style="color: red;"><?php echo $db_hiba; ?></p>
+        <?php endif; ?>
 
-document.getElementById('contact_form').onsubmit = function(e) {
-    let ok = true;
-    const email = document.getElementById('e').value;
-    const msg = document.getElementById('m').value;
-
-    if (!email.includes('@')) {
-        document.getElementById('js_err_e').style.display = 'block';
-        ok = false;
-    } else { document.getElementById('js_err_e').style.display = 'none'; }
-
-    if (msg.trim() === "") {
-        document.getElementById('js_err_m').style.display = 'block';
-        ok = false;
-    } else { document.getElementById('js_err_m').style.display = 'none'; }
-
-    if (!ok) e.preventDefault(); 
-};
-</script>
+        <div class="table-res" style="overflow-x: auto;">
+            <table class="uzenet-tablazat">
+                <thead>
+                <tr>
+                    <th>Küldő neve</th>
+                    <th>E-mail</th>
+                    <th>Üzenet</th>
+                    <th>Dátum</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php if (empty($beerk_uzenetek)): ?>
+                    <tr><td colspan="4" style="text-align:center;">Nincsenek még beérkezett üzenetek.</td></tr>
+                <?php else: ?>
+                    <?php foreach($beerk_uzenetek as $row): ?>
+                        <tr>
+                            <td><?= htmlspecialchars($row['nev']) ?></td>
+                            <td><?= htmlspecialchars($row['email']) ?></td>
+                            <td><?= nl2br(htmlspecialchars($row['uzenet'])) ?></td>
+                            <td><?= $row['datum'] ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+                </tbody>
+            </table>
+        </div>
+    <?php endif; ?>
+</div>
